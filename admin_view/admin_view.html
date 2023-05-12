@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="author" content="Nicolás Cieri - Comisión 26B" />
@@ -8,104 +9,143 @@
     <link rel="stylesheet" href="./css/style.css" />
     <title>DevShop</title>
     <!-- <link rel="icon" href="./image/logo.png" /> -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@200;300;500;700;800&display=swap" rel="stylesheet">
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
-      crossorigin="anonymous"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@200;300;500;700;800&display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
-  </head>
-  <body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
     <!--header-->
+    <!-- <header class="header"> -->
+    <!-- <div class="header__container-logo"> -->
+    <!-- <img class="header__logo" src="../image/logo.png" alt="logo-header" /> -->
+    <!-- <h5 class="header__logo">DevShop</h5> -->
+    <!-- </div> -->
+    <!-- <nav class="header__navbar navbar-expand-lg">
+            <a class="header__navbar-link" href="#">Inicio</a>
+            <a class="header__navbar-link" href="#">Contacto</a>
+            <a class="header__navbar-link" href="#">Sobre Nosotros</a>
+        </nav> -->
+    <!-- </header> -->
     <header class="header">
-      <div class="header__container-logo">
-        <!-- <img class="header__logo" src="../image/logo.png" alt="logo-header" /> -->
-        <h5 class="header__logo" >DevShop</h5>
-      </div>
-      <nav class="header__navbar">
-        <a class="header__navbar-link" href="#">Inicio</a>
-        <a class="header__navbar-link" href="#">Contacto</a>
-        <a class="header__navbar-link" href="#">Sobre Nosotros</a>
-      </nav>
+        <nav class="navbar position-fixed fixed-top navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <h5 class="header__logo">DevShop</h5>
+                <button class="navbar-toggler navbar-menu" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link header__navbar-link" href="#">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link header__navbar-link" href="#">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link header__navbar-link" href="#">Sobre Nosotros</a>
+                        </li>
+                        <div class="nav-item">
+                            <button type="button" class="btn btn-outline-info" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">
+                                Login
+                            </button>
+                        </div>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-info" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
     </header>
 
     <!--main-->
     <section class="main">
-      <div class="main__container">
-        <!-- Ejemplo Temporal-->
-        <article class="product-card">
-          <div class="product-card-body">
-            <img class="product-img" src="../image/placeholder.png" alt="product_img" />
-            <h5 class="product-text-container">
-              <span class="product-title">Product 1</span>
-              <span class="product-description"
-                >Ad ipsum tempor ipsum et cupidatat. Sit duis excepteur adipisicing veniam nostrud sit. Nostrud dolore sit aliquip officia consequat culpa est.
-                Officia officia commodo consequat eiusmod id. Dolore qui reprehenderit amet ad aute. Culpa sunt non eu ullamco id labore occaecat deserunt
-                dolor. Nulla esse qui ut ad labore occaecat.</span
-              >
-            </h5>
-            <div class="product-column">
-              <span class="product_stock">Stock</span>
-              <span class="product_price">$ 111.11</span>
-            </div>
-          </div>
-        </article>
+        <div class="main__container">
+            <!-- Ejemplo Temporal-->
+            <article class="product-card">
+                <div class="product-card-body">
+                    <img class="product-img" src="../image/placeholder.png" alt="product_img" />
+                    <h5 class="product-text-container">
+                        <span class="product-title">Product 1</span>
+                        <span class="product-description">Ad ipsum tempor ipsum et cupidatat. Sit duis excepteur
+                            adipisicing veniam nostrud sit. Nostrud dolore sit aliquip officia consequat culpa est.
+                            Officia officia commodo consequat eiusmod id. Dolore qui reprehenderit amet ad aute. Culpa
+                            sunt non eu ullamco id labore occaecat deserunt
+                            dolor. Nulla esse qui ut ad labore occaecat.</span>
+                    </h5>
+                    <div class="product-column">
+                        <span class="product_stock">Stock</span>
+                        <span class="product_price">$ 111.11</span>
+                    </div>
+                </div>
+            </article>
 
-        <div class="divider"></div>
+            <div class="divider"></div>
 
-        <article class="product-card">
-          <div class="product-card-body">
-            <img class="product-img" src="../image/placeholder.png" alt="product_img" />
-            <h5 class="product-text-container">
-              <span class="product-title">Product 2</span>
-              <span class="product-description"
-                >Ad ipsum tempor ipsum et cupidatat. Sit duis excepteur adipisicing veniam nostrud sit. Nostrud dolore sit aliquip officia consequat culpa est.
-                Officia officia commodo consequat eiusmod id. Dolore qui reprehenderit amet ad aute. Culpa sunt non eu ullamco id labore occaecat deserunt
-                dolor. Nulla esse qui ut ad labore occaecat.</span
-              >
-            </h5>
-            <div class="product-column">
-              <span class="product_stock">Stock</span>
-              <span class="product_price">$ 111.11</span>
-            </div>
-          </div>
-        </article>
-        <!-- Ejemplo Temporal-->
-      </div>
+            <article class="product-card">
+                <div class="product-card-body">
+                    <img class="product-img" src="../image/placeholder.png" alt="product_img" />
+                    <h5 class="product-text-container">
+                        <span class="product-title">Product 2</span>
+                        <span class="product-description">Ad ipsum tempor ipsum et cupidatat. Sit duis excepteur
+                            adipisicing veniam nostrud sit. Nostrud dolore sit aliquip officia consequat culpa est.
+                            Officia officia commodo consequat eiusmod id. Dolore qui reprehenderit amet ad aute. Culpa
+                            sunt non eu ullamco id labore occaecat deserunt
+                            dolor. Nulla esse qui ut ad labore occaecat.</span>
+                    </h5>
+                    <div class="product-column">
+                        <span class="product_stock">Stock</span>
+                        <span class="product_price">$ 111.11</span>
+                    </div>
+                </div>
+            </article>
+            <!-- Ejemplo Temporal-->
+        </div>
 
-      <div class="main__container-btn">
-        <button class="container-btn">+</button>
-      </div>
+        <div class="main__container-btn">
+            <button class="container-btn">+</button>
+        </div>
     </section>
 
     <template id="templateProduct">
-      <article class="product-card">
-        <div class="product-card-body">
-          <img class="product-img" src="../image/placeholder.png" alt="product_img" />
-          <h5 class="product-text-container">
-            <span class="product-title">Product</span>
-            <span class="product-description"
-              >Ad ipsum tempor ipsum et cupidatat. Sit duis excepteur adipisicing veniam nostrud sit. Nostrud dolore sit aliquip officia consequat culpa est.
-              Officia officia commodo consequat eiusmod id. Dolore qui reprehenderit amet ad aute. Culpa sunt non eu ullamco id labore occaecat deserunt dolor.
-              Nulla esse qui ut ad labore occaecat.</span
-            >
-          </h5>
-          <div class="product-column">
-            <span class="product_stock">Stock</span>
-            <span class="product_price">$ 111.11</span>
-          </div>
-        </div>
-      </article>
+        <article class="product-card">
+            <div class="product-card-body">
+                <img class="product-img" src="../image/placeholder.png" alt="product_img" />
+                <h5 class="product-text-container">
+                    <span class="product-title">Product</span>
+                    <span class="product-description">
+                        Ad ipsum tempor ipsum et cupidatat. Sit duis excepteur adipisicing
+                        veniam nostrud sit. Nostrud dolore sit aliquip officia consequat culpa est.
+                        Officia officia commodo consequat eiusmod id. Dolore qui reprehenderit amet ad aute. Culpa sunt
+                        non eu ullamco id labore occaecat deserunt dolor.
+                        Nulla esse qui ut ad labore occaecat.
+                    </span>
+                </h5>
+                <div class="product-column">
+                    <span class="product_stock">Stock</span>
+                    <span class="product_price">$ 111.11</span>
+                </div>
+            </div>
+        </article>
     </template>
 
     <template id="templateDivider">
-      <h2 class="divider"></h2>
+        <h2 class="divider"></h2>
     </template>
 
     <script src="./js/app.js"></script>
-  </body>
+</body>
+
 </html>
