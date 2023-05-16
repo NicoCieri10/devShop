@@ -11,8 +11,9 @@
 }
 
 .contact__logo {
-	width: 8em;
-	height: 8em;
+	width: 350px;
+	height: 350px;
+	border-radius: 250px;
 }
 
 .contact {
