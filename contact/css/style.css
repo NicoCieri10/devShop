@@ -24,7 +24,7 @@
 }
 
 .contact__title {
-	color: #132d46;
+	color: #ffffff;
 	text-align: center;
 	font-size: 1.75rem;
 	margin: 1em 0;
@@ -60,7 +60,7 @@
 
 .contact__input::placeholder,
 .contact__textarea::placeholder {
-	color: #01c38e;
+	color: #132d46;
 	font-weight: bolder;
 }
 
