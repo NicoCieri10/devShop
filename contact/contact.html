@@ -24,41 +24,44 @@
   <body>
     <section class="contact">
 			<h3 class="contact__title">CONTACTANOS</h3>
-      <div class="contact__container-logo">
-				<img class="contact__logo" src="./image/logo_DevShop.jpg" alt="logo" />
-			</div>
-			<form class="contact__form">
-        <div class="contact__container-name contact__container-input">
-        <label class="contact__label">Nombre Completo</label>
-        <input
-          class="contact__input"
-          type="name"
-          name="contact_name"
-          placeholder="coloque su Nombre Completo"
-          required
-        />
+      <div class="contact__container-main">
+        <div class="contact__container-logo">
+          <img class="contact__logo" src="./image/logo_DevShop.jpg" alt="logo" />
+        </div>
+        <form class="contact__form">
+          <div class="contact__container-name contact__container-input">
+          <label class="contact__label">Nombre Completo</label>
+          <input
+            class="contact__input"
+            type="name"
+            name="contact_name"
+            placeholder="coloque su Nombre Completo"
+            required
+          />
+        </div>
+          <div class="contact__container-email contact__container-input">
+            <label class="contact__label">Correo Electronico</label>
+            <input
+              class="contact__input"
+              type="email"
+              name="contact_email"
+              placeholder="coloque su Correo Electronico"
+              required
+            />
+          </div>
+          <div class="contact__container-comment contact__container-input">
+            <label class="contact__label">Comentario</label>
+            <textarea
+              class="contact__textarea"
+              name="contact_comment"
+              placeholder="coloque su Comentario"
+              required
+            ></textarea>
+          </div>
+          <input type="submit" class="contact__form-btn" />
+        </form>
       </div>
-				<div class="contact__container-email contact__container-input">
-					<label class="contact__label">Correo Electronico</label>
-					<input
-						class="contact__input"
-						type="email"
-						name="contact_email"
-						placeholder="coloque su Correo Electronico"
-						required
-					/>
-				</div>
-				<div class="contact__container-comment contact__container-input">
-					<label class="contact__label">Comentario</label>
-					<textarea
-						class="contact__textarea"
-						name="contact_comment"
-						placeholder="coloque su Comentario"
-						required
-					></textarea>
-				</div>
-				<input type="submit" class="contact__form-btn" />
-			</form>
+      
 		</section>
       <script src="./js/app.js"></script>
   </body>

@@ -10,6 +10,11 @@
 	color: #ffffff;
 }
 
+.contact__container-main {
+	display: flex;
+	flex-direction: row;
+}
+
 .contact__logo {
 	width: 350px;
 	height: 350px;
