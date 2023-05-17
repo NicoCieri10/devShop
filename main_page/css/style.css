@@ -12,6 +12,10 @@
     --white: #ffffff;
 }
 
+.navbar {
+    background-color: var(--blue);
+}
+
 body {
     background-color: var(--black);
 }
@@ -35,8 +39,10 @@ body {
 }
 
 .header__logo {
+    text-decoration: none;
     color: var(--white);
     font-weight: bold;
+    font-size: 20px;
     margin: 0px;
 }
 
