@@ -201,6 +201,14 @@ body {
   .main__section--row {
     margin: 40px 60px;
   }
+
+  .section--products-container {
+    padding: 0px 10px;
+  }
+
+  .section--products-card {
+    margin: 0px 5px 20px;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -246,6 +254,10 @@ body {
 
   .card--title {
     font-size: 25px;
+  }
+
+  .section--products-card {
+    margin: 0px 5px 20px;
   }
 
 }
