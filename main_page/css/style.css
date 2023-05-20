@@ -49,6 +49,7 @@ body {
 .main__container {
   display: flex;
   flex-direction: column;
+  background-color: var(--black);
 }
 
 .main__carousel {
@@ -57,7 +58,6 @@ body {
 
 .carousel-item {
   height: 150px;
-  background-color: var(--black);
 }
 
 .carousel-img {
@@ -65,8 +65,21 @@ body {
   height: 150px;
 }
 
-.main__section {
-  background-color: var(--black);
+.main__section--title {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 30px;
+}
+
+.section--title {
+  color: var(--white);
+  font-size: 25px;
+  margin: 0;
+}
+
+.main__section--row {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -115,6 +128,10 @@ body {
   .carousel-img {
     height: 200px;
   }
+
+  .section--title {
+    font-size: 30px;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -130,11 +147,36 @@ body {
   }
 
   .carousel-item {
-    height: 250px;
+    height: 300px;
   }
 
   .carousel-img {
-    height: 250px;
+    height: 300px;
+  }
+
+  .main__section--title {
+    padding-top: 20px;
+    height: 50px;
+  }
+
+  .section--title {
+    font-size: 35px;
+  }
+
+  .section--card {
+    width: 180px;
+  }
+
+  .card--img {
+    width: 180px;
+  }
+
+  .card--body {
+    padding: 15px 0px;
+  }
+
+  .card--title {
+    font-size: 25px;
   }
 
 }
