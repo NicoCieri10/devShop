@@ -13,13 +13,21 @@ class Product {
         this.stock = stock;
         this.id = Date.now();
     }
-    static showProduct(products) {
+    static showRecentProducts(products) {
         containerRecent.textContent = '';
+        const fragment = document.createDocumentFragment();
+        for (let i = 0; i < 4; i++) {
+            fragment.appendChild(products[i].addNewProduct());
+        }
+        containerRecent.appendChild(fragment);
+    }
+    static showAllProducts(products) {
+        containerProducts.textContent = '';
         const fragment = document.createDocumentFragment();
         products.forEach((item) => {
             fragment.appendChild(item.addNewProduct());
         });
-        containerRecent.appendChild(fragment);
+        containerProducts.appendChild(fragment);
     }
     addNewProduct() {
         const clone = templateProduct.content.cloneNode(true);
@@ -31,17 +39,16 @@ class Product {
     }
 }
 
-const productExample = new Product(
-    'Producto',
-    'Producto de ejemplo', 
-    './image/placeholder.png', 
-    420, 
-    69,
-);
+for (let i = 0; i < 20; i++) {
+    const productExample = new Product(
+        `Producto ${i}`,
+        'Producto de ejemplo', 
+        './image/placeholder.png', 
+        i * 5 + 23, 
+        10,
+    );
+    products.splice(0, 0, productExample);
+}
 
-products.push(productExample);
-products.push(productExample);
-products.push(productExample);
-products.push(productExample);
-
-Product.showProduct(products);
+Product.showRecentProducts(products);
+Product.showAllProducts(products);
