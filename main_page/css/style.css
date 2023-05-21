@@ -65,6 +65,10 @@ body {
   height: 150px;
 }
 
+.main__section {
+  align-items: center;
+}
+
 .main__section--title {
   margin-top: 10px;
   padding-top: 10px;
@@ -128,6 +132,7 @@ body {
 .main__section--products {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .section--products-title {
@@ -198,8 +203,17 @@ body {
     font-size: 30px;
   }
 
+  .section--card {
+    margin: 0px 5px 20px;
+  }
+
   .main__section--row {
-    margin: 40px 60px;
+    margin: 40px 100px;
+    align-items: center;
+  }
+
+  .section--products-container {
+    padding: 0px 10px;
   }
 }
 
@@ -228,6 +242,15 @@ body {
     height: 50px;
   }
 
+  .main__section--row {
+    max-width: 1000px;
+  }
+
+  .section--products-container {
+    max-width: 1500px;
+    justify-content: space-around;
+  }
+
   .section--title {
     font-size: 35px;
   }
@@ -247,5 +270,4 @@ body {
   .card--title {
     font-size: 25px;
   }
-
 }

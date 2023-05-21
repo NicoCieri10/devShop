@@ -93,113 +93,28 @@
         <h1 class="section--title">Últimos Añadidos</h1>
       </div>
 
-      <div class="main__section--row">
-        <div class="section--card">
-          <img class="card--img" src="./image/placeholder.png" alt="product_img">
-          <div class="card--body">
-            <h2 class="card--title">Producto 1</h2>
-            <h2 class="card--subtitle">$111.11</h2>
-          </div>
-        </div>
-
-        <div class="section--card">
-          <img class="card--img" src="./image/placeholder.png" alt="product_img">
-          <div class="card--body">
-            <h2 class="card--title">Producto 2</h2>
-            <h2 class="card--subtitle">$111.11</h2>
-          </div>
-        </div>
-
-        <div class="section--card">
-          <img class="card--img" src="./image/placeholder.png" alt="product_img">
-          <div class="card--body">
-            <h2 class="card--title">Producto 3</h2>
-            <h2 class="card--subtitle">$111.11</h2>
-          </div>
-        </div>
-
-        <div class="section--card">
-          <img class="card--img" src="./image/placeholder.png" alt="product_img">
-          <div class="card--body">
-            <h2 class="card--title">Producto 4</h2>
-            <h2 class="card--subtitle">$111.11</h2>
-          </div>
-        </div>
-      </div>
+      <div class="main__section--row" id="rowContainer"></div>
 
       <div class="main__section--products">
         <div class="section--products-title">
           <h1 class="products--title">Productos</h1>
         </div>
 
-        <div class="section--products-container">
-          <div class="section--products-card">
-            <img class="products-card--img" src="./image/placeholder.png" alt="product_img">
-            <div class="products-card--body">
-              <h2 class="products-card--title">Producto 1</h2>
-              <h2 class="products-card--subtitle">$111.11</h2>
-            </div>
-          </div>
-
-          <div class="section--products-card">
-            <img class="products-card--img" src="./image/placeholder.png" alt="product_img">
-            <div class="products-card--body">
-              <h2 class="products-card--title">Producto 1</h2>
-              <h2 class="products-card--subtitle">$111.11</h2>
-            </div>
-          </div>
-
-          <div class="section--products-card">
-            <img class="products-card--img" src="./image/placeholder.png" alt="product_img">
-            <div class="products-card--body">
-              <h2 class="products-card--title">Producto 1</h2>
-              <h2 class="products-card--subtitle">$111.11</h2>
-            </div>
-          </div>
-
-          <div class="section--products-card">
-            <img class="products-card--img" src="./image/placeholder.png" alt="product_img">
-            <div class="products-card--body">
-              <h2 class="products-card--title">Producto 1</h2>
-              <h2 class="products-card--subtitle">$111.11</h2>
-            </div>
-          </div>
-
-          <div class="section--products-card">
-            <img class="products-card--img" src="./image/placeholder.png" alt="product_img">
-            <div class="products-card--body">
-              <h2 class="products-card--title">Producto 1</h2>
-              <h2 class="products-card--subtitle">$111.11</h2>
-            </div>
-          </div>
-
-          <div class="section--products-card">
-            <img class="products-card--img" src="./image/placeholder.png" alt="product_img">
-            <div class="products-card--body">
-              <h2 class="products-card--title">Producto 1</h2>
-              <h2 class="products-card--subtitle">$111.11</h2>
-            </div>
-          </div>
-
-          <div class="section--products-card">
-            <img class="products-card--img" src="./image/placeholder.png" alt="product_img">
-            <div class="products-card--body">
-              <h2 class="products-card--title">Producto 1</h2>
-              <h2 class="products-card--subtitle">$111.11</h2>
-            </div>
-          </div>
-
-          <div class="section--products-card">
-            <img class="products-card--img" src="./image/placeholder.png" alt="product_img">
-            <div class="products-card--body">
-              <h2 class="products-card--title">Producto 1</h2>
-              <h2 class="products-card--subtitle">$111.11</h2>
-            </div>
-          </div>
-        </div>
+        <div class="section--products-container" id="productsContainer"></div>
       </div>
     </div>
   </section>
+
+  <template id="templateProduct">
+    <div class="section--card">
+      <img class="card--img" src="./image/placeholder.png" alt="product_img">
+      <div class="card--body">
+        <h2 class="card--title">Producto</h2>
+        <h2 class="card--subtitle">$</h2>
+      </div>
+    </div>
+  </template>
+
   <script src="./main_page/js/app.js"></script>
 </body>
 
