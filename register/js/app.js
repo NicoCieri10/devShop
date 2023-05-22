@@ -7,6 +7,12 @@ const alert_password=document.querySelector('#alert-passUno');
 const alert_passwordDos=document.querySelector('#alert-passDos');
 const alert_success=document.querySelector('#alert-success');
 
+const formuModal=document.querySelector('.form-modal');
+const email_modal=document.querySelector('.modal__email');
+const contra_modal=document.querySelector('.modal__contra');
+const alert_modal=document.querySelector('#alert-modal');
+
+
 const regUserEmail = /^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$/;
 const regUserPass= /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/;
 
@@ -89,3 +95,29 @@ const agregarUsuario= (e)=>{
     usuarios.push(usuario);
     }
 
+    formuModal.addEventListener('submit',(e) =>{
+        e.preventDefault();
+
+    const valorUser=email_modal.value;
+    const valorContra=contra_modal.value;
+    if(usuarios[0].email===valorUser && usuarios[0].contra===valorContra){
+        location.href="/admin_view/admin_view.html";
+    }else{
+        const findUser=usuarios.find((item)=>item.email ===valorUser && item.contra===valorContra);
+        if(findUser !==undefined){
+            location.href ="/index.html";
+            }else{
+                mostrarModalMal();
+            }
+
+    }
+
+
+
+    });
+
+
+    const mostrarModalMal= ()=>{
+        alert_modal.classList.remove('d-none');
+        alert_modal.textContent="Datos Inválidos"
+     }
