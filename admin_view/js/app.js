@@ -22,10 +22,6 @@ class Product {
                 fragment.appendChild(templateDivider.content.cloneNode(true));
             }
         }
-        // products.forEach((item) => {
-        //     fragment.appendChild(item.addNewProduct());
-        //     fragment.appendChild(templateDivider.content.cloneNode(true));
-        // });
         containerMain.appendChild(fragment);
     }
     addNewProduct() {
