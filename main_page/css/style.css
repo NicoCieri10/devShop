@@ -67,6 +67,8 @@ body {
 
 .main__section {
   align-items: center;
+  justify-content: space-around;
+
 }
 
 .main__section--title {
@@ -243,7 +245,8 @@ body {
   }
 
   .main__section--row {
-    max-width: 1000px;
+    /* max-width: 1000px; */
+    margin: 40px 5em;
   }
 
   .section--products-container {
