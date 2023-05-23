@@ -28,8 +28,8 @@ class Product {
         const clone = templateProduct.content.cloneNode(true);
         clone.querySelector('.product-title').textContent = this.name;
         clone.querySelector('.product-description').textContent = this.description;
-        clone.querySelector('.product_price').textContent = this.price;
-        clone.querySelector('.product_stock').textContent = this.stock;
+        clone.querySelector('.product_price').textContent = `$${this.price}`;
+        clone.querySelector('.product_stock').textContent = `${this.stock} u.`;
         clone.querySelector('.product-card').dataset.id = this.id;
 
         return clone;
@@ -42,7 +42,7 @@ for (let i = 0; i < 20; i++) {
         'Producto de ejemplo: Nostrud velit nulla do do ullamco labore cillum non occaecat. Exercitation do quis adipisicing qui velit ullamco ut culpa veniam irure non irure labore. Incididunt laboris veniam ad duis elit ad qui proident enim.', 
         './image/placeholder.png', 
         `$ ${i * 5 + 23}`, 
-        '10 u.',
+        '10',
     );
     products.push(productExample);
 }
