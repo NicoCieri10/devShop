@@ -61,7 +61,7 @@ body {
 }
 
 .carousel-img {
-  object-fit: cover;
+  object-fit: contain;
   height: 150px;
 }
 
