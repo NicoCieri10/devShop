@@ -5,11 +5,43 @@
 	box-sizing: border-box;
 }
 
-*::selection {
-	background: #132d46;
-	color: #ffffff;
+:root {
+    --black: #1a1e29;
+    --blue: #132d46;
+    --green: #01c38e;
+    --white: #ffffff;
+	--yellow: rgb(215, 215, 0)
 }
 
+.navbar {
+    background-color: var(--blue);
+}
+
+.header {
+    background-color: var(--blue);
+    display: flex;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    height: 55px;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__container-logo {
+    align-items: center;
+}
+
+.header__logo {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0px;
+}
 .contact__container-main {
 	display: flex;
 	flex-direction: column;
@@ -28,15 +60,15 @@
 }
 
 .contact {
-	background-color:#132d46;
-	color: #ffffff;
+	background-color: var(--blue);
+	color:var(--white);
 	display: flex;
 	flex-direction: column;
 	padding: 2em 20px;
 }
 
 .contact__title {
-	color: #ffffff;
+	color:var(--white);
 	text-align: center;
 	font-size: 1.75rem;
 	margin: 1em 0;
@@ -66,20 +98,20 @@
 }
 
 .contact__form-btn:hover {
-	background: rgb(215, 215, 0);
-	border: 2px solid rgb(215, 215, 0);
+	background: var(--yellow);
+	border: 2px solid var(--yellow);
 }
 
 .contact__input::placeholder,
 .contact__textarea::placeholder {
-	color: #132d46;
+	color: var(--blue);
 	font-weight: bolder;
 }
 
 .contact__input:focus,
 .contact__textarea:focus {
-	background: #1a1e29;
-	color: #ffffff;
+	background: var(--black);
+	color:var(--white);
 }
 
 .contact__textarea {
@@ -87,7 +119,7 @@
 }
 
 .contact__form {
-	background-color: #01c38e;
+	background-color: var(--green);
 	display: flex;
 	flex-direction: column;
 	padding: 0.75em;
@@ -101,7 +133,7 @@
 	}
 
 	.contact__form {
-		background-color: #01c38e;
+		background-color: var(--green);
 		/* width: 90%;
 		margin: 0 auto 1.25em; */
 		display: flex;
@@ -133,7 +165,7 @@
 @media (min-width: 768px) {
 	
 	.contact__form {
-		background-color: #01c38e;
+		background-color:  var(--green);
 		/* width: 60%;
 		margin: 0 auto 1.25em; */
 		display: flex;
@@ -145,8 +177,18 @@
 
 @media (min-width: 1024px) {
 	
+	.header__navbar {
+        margin-left: 100px;
+        display: block;
+    }
+
+    .header__navbar-link {
+        margin-left: 30px;
+        color: var(--white);
+        text-decoration: none;
+    }
 	.contact__form {
-		background-color: #01c38e;
+		background-color:  var(--green);
 		/* width: 40em;
 		margin: 0 auto 3em; */
 		display: flex;
