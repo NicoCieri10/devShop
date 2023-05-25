@@ -12,6 +12,7 @@ export default class Product {
         clone.querySelector('.card--title').textContent = this.name;
         clone.querySelector('.card--subtitle').textContent = `$${this.price}`;
         clone.querySelector('.section--card').dataset.id = this.id;
+        clone.querySelector('.card--img').src = this.image;
         
         return clone;
     }
@@ -21,6 +22,8 @@ export default class Product {
         clone.querySelector('.product_price').textContent = `$${this.price}`;
         clone.querySelector('.product_stock').textContent = `${this.stock} u.`;
         clone.querySelector('.product-card').dataset.id = this.id;
+        clone.querySelector('.product-img').src = this.image;
+
         
         return clone;
     }
