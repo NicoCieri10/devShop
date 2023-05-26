@@ -1,13 +1,124 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <title>DevShop</title>
-  </head>
-  <body>
-    <script src="./js/app.js"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <meta name='author' content='DevShop'>
+    <meta>
+    <meta name='description' content='Notebook ASUS Zenbook S 13'>
+    <link rel="icon" href="">
+    <link rel="stylesheet" href="./css/style.css">
+    <link 
+        rel="stylesheet" 
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@200&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="main-container">
+        <section class="product__container">
+            <article class="product__gallery">
+                <div class="gallery__image-container">
+                    <img class="gallery__img" src="./images/img2.png" alt="">
+                </div>
+            </article>
+            <article class="product__details">
+                <h2 class="details__company">ASUS Company</h2>
+                <h1 class="details__title">ASUS Zenbook S 13 OLED (UX5304)</h1>
+                <p class="details__description">
+                    ¡Aligera tu vida con el ultrafino y superligero Zenbook S 13 OLED! medioambiente de la historia, en línea con nuestros valores esenciales. Más cuidado equivale a menos impacto.
+                </p>
+                <div class="details__price-container">
+                    <p class="details__price">$675.450</p>
+                </div>
+                <div class="details__button-container button-container">
+                    <a class="details__button buttons" data-product="ASUS Zenbook S 13 OLED (UX5304)" data-price="675499">
+                        <span class="details__button--decoration details__button--decoration1"></span>
+                        <span class="details__button--decoration details__button--decoration2"></span>
+                        <span class="details__button--decoration details__button--decoration3"></span>
+                        <span class="details__button--decoration details__button--decoration4"></span>
+                        Añadir al carrito
+                    </a>
+                </div>
+            </article>
+        </section>
+        <section class="suggestions__container">
+            <H3 class="suggestions__title">Los usuarios también se interesaron en:</H3>
+            <div class="suggestions__cards-container">
+                <div class="suggestions__cards">
+                    <img  class="suggestions__card-img" src="./images/Laptop-stand__Netmak--black.jpg" alt="Soporte para notebook Netmak">
+                    <div class="suggestions__card-info">
+                        <p class="suggestions__product">Soporte para notebook Netmak</p>
+                        <p class="suggestions__price">$2.450</p>
+                        <div class="button-container">
+                            <a class="suggestions__card-button buttons"data-product="Soporte para notebook Netmak" data-price="2450">
+                                Añadir    <i class="bi bi-cart2 icon"></i>
+                            </a>
+                        </div>
+                    </div>  
+                </div>
+                <div class="suggestions__cards">
+                    <img  class="suggestions__card-img" src="./images/Magic-mouse-2__Apple--silver.jpg" alt="Apple Magic Mouse 2">
+                    <div class="suggestions__card-info">
+                        <p class="suggestions__product">Apple Magic Mouse 2</p>
+                        <p class="suggestions__price">$49.899</p>
+                        <div class="suggestions__button-container button-container">
+                            <a class="suggestions__card-button buttons" data-product="Apple Magic Mouse 2" data-price="49899">
+                                Añadir    <i class="bi bi-cart2 icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="suggestions__cards">
+                    <img  class="suggestions__card-img" src="./images/Headset__Logitech-Astro-a10-2nd-generation--white.jpg" alt="Auricular Logitech Astro a10 2da generación (blanco)">
+                    <div class="suggestions__card-info">
+                        <p class="suggestions__product">Auricular Logitech Astro a10 2da gen</p>
+                        <p class="suggestions__price">$36.990</p>
+                        <div class="button-container">
+                            <a class="suggestions__card-button buttons" data-product="Auricular Logitech Astro a10 2da generación" data-price="36990">
+                                Añadir    <i class="bi bi-cart2 icon"></i>
+                            </a>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </section>
+        <template id="template">
+            <div class="template__lists">
+                <li class="list-group-item">
+                    <span class="lead"></span>
+                </li>
+                <li class="list-group-item">
+                    <div class="list-group-buttons">
+                        <button class="buttons btn-success">
+                            <i class="bi bi-plus icon__plus icon"></i>
+                        </a>
+                        <button class="buttons btn-danger">
+                            <i class="bi bi-dash icon__minus icon"></i>
+                        </a>
+                    </div>
+                </li>
+            </div>  
+        </template>
+        <section class="cart__container">
+            <ul class="cart__list" id="cart"></ul>
+        </section>
+        <footer class="cart__footer" id="footer">
+            <template class="cart__template-footer" id="templateFooter">
+                <div class="cart__card">
+                    <p class="cart__card-total">Total: $<span class="cart__card-price"></span></p>
+                    <div class="cart__button-buy-container">
+                        <a class="cart__button-buy buttons">
+                            Finalizar compra
+                        </a>
+                    </div>
+                </div>
+            </template>
+        </footer>
+    </main>
+    <script tipe="module" src="./js/app.js"></script>
+</body>
 </html>
