@@ -111,14 +111,16 @@ body {
 
 .card--img {
   width: 120px;
+  height: 130px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .card--body {
   display: flex;
   flex-direction: column;
+  height: 100px;
   align-items: center;
   padding: 10px 5px 5px 5px;
 }
@@ -130,9 +132,13 @@ body {
 
 .card--title {
   font-size: 15px;
-  height: 60px;
+  height: 80px;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.card--subtitle {
+  height: 20px;
 }
 
 .main__section--products {
@@ -163,39 +169,6 @@ body {
   flex-wrap: wrap;
 }
 
-.section--products-card {
-  width: 140px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: var(--blue);
-  border-radius: 10px;
-  margin-bottom: 20px;
-}
-
-.products-card--img {
-  width: 140px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  object-fit: contain;
-}
-
-.products-card--body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 10px;
-}
-
-.products-card--title,
-.products-card--subtitle {
-  color: var(--white);
-}
-
-.products-card--title {
-  font-size: 20px;
-}
-
 @media (min-width: 768px) {
   .carousel-item {
     height: 200px;
@@ -211,6 +184,10 @@ body {
 
   .section--card {
     margin: 0px 5px 20px;
+  }
+
+  .card--subtitle {
+    font-size: 22px;
   }
 
   .main__section--row {
@@ -264,19 +241,26 @@ body {
 
   .section--card {
     width: 180px;
-    height: 300px;
+    height: 320px;
   }
 
   .card--img {
     width: 180px;
+    height: 200px;
   }
 
   .card--body {
     padding: 15px 10px;
-    height: 140px;
+    height: 120px;
   }
 
   .card--title {
     font-size: 20px;
+    height: 100px;
+  }
+
+  .card--subtitle {
+    height: 25px;
+    font-size: 28px;
   }
 }
