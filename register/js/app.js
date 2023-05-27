@@ -72,6 +72,7 @@ formulario.addEventListener('submit',(e) =>{
     }
     agregarUsuario(e);
     mostrarFormEnviado ();
+    limpiarFormulario();
 
 });
 
@@ -86,6 +87,13 @@ const mostrarMsjError =(errores) =>{
         element.tipo.textContent=element.msg;
     });
 }
+
+function limpiarFormulario() {
+    formulario.reset();
+  }
+
+
+
 
 const agregarUsuario= (e)=>{
     const usuario={
@@ -102,10 +110,12 @@ const agregarUsuario= (e)=>{
     const valorContra=contra_modal.value;
     if(usuarios[0].email===valorUser && usuarios[0].contra===valorContra){
         location.href="/admin_view/admin_view.html";
+        localStorage.setItem('user','administrador');
     }else{
         const findUser=usuarios.find((item)=>item.email ===valorUser && item.contra===valorContra);
         if(findUser !==undefined){
             location.href ="/index.html";
+            localStorage.setItem('user','usuario');
             }else{
                 mostrarModalMal();
             }
