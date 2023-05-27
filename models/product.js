@@ -1,11 +1,11 @@
 export default class Product {
-    constructor(name, description, image, price, stock) {
+    constructor(name, description, image, price, stock, id) {
         this.name = name;
         this.description = description;
         this.image = image;
         this.price = price;
         this.stock = stock;
-        this.id = Date.now();
+        this.id = id;
     };
 
     addNewProductMain(clone) {
@@ -22,9 +22,8 @@ export default class Product {
         clone.querySelector('.product_price').textContent = `$${this.price}`;
         clone.querySelector('.product_stock').textContent = `${this.stock} u.`;
         clone.querySelector('.product-card').dataset.id = this.id;
-        clone.querySelector('.product-img').src = this.image;
+        clone.querySelector('.product-img').src = `.${this.image}`;
 
-        
         return clone;
     }
 };

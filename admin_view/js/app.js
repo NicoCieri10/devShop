@@ -4,7 +4,7 @@ import products from "../../data/products.js";
 const containerMain = document.querySelector('#mainContainer');
 const templateProduct = document.querySelector('#templateProduct');
 const templateDivider = document.querySelector('#templateDivider');
-const templateBtn = document.querySelector('#templateBtn');
+// const addButton = document.querySelector('#addButton');
 
 class ProductAdmin extends Product {
     static showProducts(products) {
@@ -25,3 +25,21 @@ class ProductAdmin extends Product {
 }
 
 ProductAdmin.showProducts(products);
+
+// document.addEventListener('click', (e) => {
+//     if (e.target.matches('.btn--delete')) {
+//         const id = e.target.dataset.id;
+//         const findProduct = products.findIndex((item) => item.id === parseInt(id));
+//         products.splice(findProduct, 1);
+//         ProductAdmin.showProducts(products);
+//     }
+// });
+
+document.addEventListener('click', (e) => {
+    if (e.target.matches('#addBtn')) {
+        const id = e.target.dataset.id;
+        const findProduct = products.findIndex((item) => item.id === parseInt(id));
+        products.splice(findProduct, 1);
+        ProductAdmin.showProducts(products);
+    }
+});

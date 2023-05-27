@@ -7,6 +7,7 @@ const products = [
         './image/products_img/lenovo_v15_pentium.jpg', 
         224990, 
         10,
+        0,
     ),
     new Product(
         'NOTEBOOK LENOVO V15 G2 I7 1165G7',
@@ -14,6 +15,7 @@ const products = [
         './image/products_img/lenovo_v15_g2.jpg',
         494990, 
         10,
+        1,
     ),
     new Product(
         'NOTEBOOK DELL INSPIRON 3511',
@@ -21,6 +23,7 @@ const products = [
         './image/products_img/dell_inspiron_3511.jpg', 
         299990, 
         10,
+        2,
     ),
     new Product(
         'NOTEBOOK ASUS TUF GAMING F15',
@@ -28,6 +31,7 @@ const products = [
         './image/products_img/asus_tuf_f15.jpg', 
         639990, 
         10,
+        3,
     ),
     new Product(
         'MOUSE INALAMBRICO LOGITECH POP',
@@ -35,6 +39,7 @@ const products = [
         './image/products_img/logitech_pop.jpg', 
         14990, 
         10,
+        4,
     ),
     new Product(
         'MOUSE REDRAGON M808 STORM PRO',
@@ -42,6 +47,7 @@ const products = [
         './image/products_img/redragon_m808_storm_pro.jpeg', 
         15790, 
         10,
+        5,
     ),
     new Product(
         'MOUSE GENIUS INALAMBRICO ECO 8100',
@@ -49,6 +55,7 @@ const products = [
         './image/products_img/genius_8100.jpg', 
         6299, 
         10,
+        6,
     ),
     new Product(
         'MOUSE INALAMBRICO LOGITECH M170',
@@ -56,6 +63,7 @@ const products = [
         './image/products_img/logitech_m170.png', 
         7490, 
         10,
+        7,
     ),
     new Product(
         'TECLADO REDRAGON K552 KUMARA',
@@ -63,6 +71,7 @@ const products = [
         './image/products_img/redragon_k552_kumara.png', 
         22990, 
         10,
+        8,
     ),
     new Product(
         'TECLADO HYPERX ALLOY ORIGINS',
@@ -70,12 +79,14 @@ const products = [
         './image/products_img/hyperx_alloy_origins.jpg', 
         44990, 
         10,
+        9,
     ),
     new Product(
         'TECLADO LOGITECH G G213 RETROILUMINADO',
         'Cada tecla de G213 está optimizada para mejorar la experiencia táctil y ofrecer una respuesta superrápida, hasta 4 veces superior a la de los teclados estándar. La matriz de prevención de efecto fantasma para juegos está programada para dominar el control al pulsar simultáneamente varias teclas de juego.', 
         './image/products_img/logitech_g_g213.png', 
         37990, 
+        10,
         10,
     ),
     new Product(
@@ -84,6 +95,7 @@ const products = [
         './image/products_img/philips_k254.jpg', 
         5090, 
         10,
+        11,
     ),
     new Product(
         'MONITOR 22 NOBLEX 91MK22X7100',
@@ -91,6 +103,7 @@ const products = [
         './image/products_img/noblex_22_91mk22x7100.jpg', 
         57990, 
         10,
+        12,
     ),
     new Product(
         'MONITOR 24 LED SAMSUNG T350',
@@ -98,6 +111,7 @@ const products = [
         './image/products_img/samsung_24_t350.png', 
         58990, 
         10,
+        13,
     ),
     new Product(
         'MONITOR 32 VIEWSONIC ELITE XG320U',
@@ -105,6 +119,7 @@ const products = [
         './image/products_img/viewsonic_elite_xg320u.png', 
         665319, 
         10,
+        14,
     ),
     new Product(
         'MONITOR 27 SAMSUNG LED ODDYSSEY G3',
@@ -112,6 +127,7 @@ const products = [
         './image/products_img/samsung_g3_27.jpg', 
         157639, 
         10,
+        15,
     ),
     new Product(
         'MONITOR 24 LED SAMSUNG G50 FHD CURVO 144HZ',
@@ -119,6 +135,7 @@ const products = [
         './image/products_img/samsung_g50_24.png', 
         99999, 
         10,
+        16,
     ),
     new Product(
         'CPU INTEL CORE I3 10105F',
@@ -126,6 +143,7 @@ const products = [
         './image/products_img/intel_core_i3_10105f.jpg', 
         39499, 
         10,
+        17,
     ),
     new Product(
         'CPU INTEL CORE I5 11600K',
@@ -133,6 +151,7 @@ const products = [
         './image/products_img/intel_core_i5_11600k.jpg', 
         154990, 
         10,
+        18,
     ),
     new Product(
         'CPU AMD RYZEN 3 4100',
@@ -140,6 +159,7 @@ const products = [
         './image/products_img/amd_ryzen_3_4100.jpg', 
         69990, 
         10,
+        19,
     ),
 ];
 

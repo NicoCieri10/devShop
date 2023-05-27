@@ -78,9 +78,8 @@ body {
     line-height: 50px;
     background-color: var(--green);
     z-index: 10;
-    position: absolute;
-    bottom: -15px;
-    right: -15px;
+    bottom: 15px;
+    right: 15px;
 }
 
 .product-card {
@@ -139,7 +138,7 @@ body {
     height: 50px;
     color: var(--black);
     font-weight: bold;
-    font-size: 23px;
+    font-size: 20px;
     padding: 8px;
     text-align: center;
 }
@@ -203,6 +202,7 @@ body {
     .product_stock,
     .product_price {
         width: 120px;
+        font-size: 23px;
     }
 }
 
@@ -236,8 +236,8 @@ body {
         width: 60px;
         font-size: 60px;
         line-height: 60px;
-        bottom: -20px;
-        right: -20px;
+        bottom: 20px;
+        right: 20px;
     }
 
     .product-card {
@@ -252,8 +252,6 @@ body {
 
     .product-img {
         border-radius: 20px;
-        width: 200px;
-        height: 200px;
     }
 
     .product-text-container {
