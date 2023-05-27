@@ -5,31 +5,9 @@ const footerElement = document.getElementById('footer');
 const templateElement = document.getElementById('template');
 const templateFooterElement = document.getElementById('templateFooter');
 
-// const getProduct = async () => {
-//   try {
-//     const data = await ;
-//     const info = await data.json;
-//     showProduct(info);
-//   } catch (error) {
-//     console.log('error');
-// };
+const id = localStorage.getItem('productId');
 
-// getProduct();
 
-// const showProduct = (info) => {
-//   info.results((item) => {
-//     const clone = productContainer.content.cloneNode(true);
-//     clone.querySelector('.gallery__image-container').src = item.image;
-//     clone.querySelector('.gallery__image-container').alt = `${item.name} ${item.id}`;
-//     clone.querySelector('.details__company').textContent = item.company;
-//     clone.querySelector('.details__title').textContent = item.name;
-//     clone.querySelector('.details__description').textContent = item.descriprtion;
-//     clone.querySelector('.details__price').textContent = item.price;
-
-//     productContainer.appendChild(clone);
-//   });
-//   bodyContainer.appendChild(productContainer);
-// }
 
 let cart = [];
 
@@ -105,27 +83,10 @@ function loadCartFromLocalStorage() {
 
 const addButton = document.querySelector('.details__button');
 addButton.addEventListener('click', () => {
-  const productName = addButton.getAttribute('data-product');
-  const productPrice = parseFloat(addButton.getAttribute('data-price'));
-
-  const existingProduct = cart.find((product) => product.name === productName);
-
-  if (existingProduct) {
-    existingProduct.quantity++;
-  } else {
-    cart.push({ name: productName, price: productPrice, quantity: 1 });
-  }
-
-  renderCart();
-  saveCartToLocalStorage();
-});
-
-const suggestionButtons = document.querySelectorAll('.suggestions__card-button');
-
-suggestionButtons.forEach((button) => {
-  button.addEventListener('click', () => {
-    const productName = button.getAttribute('data-product');
-    const productPrice = parseFloat(button.getAttribute('data-price'));
+  
+  if (checkUserKey()) {
+    const productName = addButton.getAttribute('data-product');
+    const productPrice = parseFloat(addButton.getAttribute('data-price'));
 
     const existingProduct = cart.find((product) => product.name === productName);
 
@@ -137,17 +98,44 @@ suggestionButtons.forEach((button) => {
 
     renderCart();
     saveCartToLocalStorage();
+  } else {
+    window.alert('Para agregar productos al carrito es necesario iniciar sesión.');
+  }
+});
+
+const suggestionButtons = document.querySelectorAll('.suggestions__card-button');
+
+suggestionButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    
+    if (checkUserKey()) {
+      const productName = button.getAttribute('data-product');
+      const productPrice = parseFloat(button.getAttribute('data-price'));
+
+      const existingProduct = cart.find((product) => product.name === productName);
+
+      if (existingProduct) {
+        existingProduct.quantity++;
+      } else {
+        cart.push({ name: productName, price: productPrice, quantity: 1 });
+      }
+
+      renderCart();
+      saveCartToLocalStorage();
+    } else {
+      const confirmResult = window.confirm('Para agregar productos al carrito es necesario iniciar sesión. ¿Desea ir a la página de inicio de sesión?');
+      if (confirmResult) {
+        window.location.href = '';
+      } else {
+        window.alert('Puede seguir explorando las páginas sin agregar productos al carrito.');
+      }
+    }
   });
 });
 
 loadCartFromLocalStorage();
 
+function checkUserKey() {
+  return localStorage.getItem("user") !== null;
+};
 
-
-// var answer = window.confirm("Para agregar productos al carrito es necesario iniciar sesión");
-
-// if (answer) {
-//   window.location.href = ;
-// } else {
-//     window.alert();
-// }
