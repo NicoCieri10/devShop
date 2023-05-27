@@ -68,11 +68,13 @@ body {
 
 .details__title {
     font-size: 2.5rem;
+    color: var(--white-color);
 }
 
 .details__description {
     padding: 6px 0;
     font-size: 1.5rem;
+    color: var(--white-color);
     line-height: 2rem;
 }
 
@@ -86,21 +88,7 @@ body {
 
 .details__price {
     font-size: 2rem;
-}
-
-.details__price-descount {
-    color: var(--aqua-green-color);
-    background-color: var(--mint-color);
-    margin-left: 1rem;
-    font-size: 1.5rem;
-    padding: 3px 2px;
-}
-
-.details__price-before {
-    text-decoration: line-through;
-    color: #ffffff9a;
-    margin-left: 2rem;
-    padding-top: 10px;
+    color: var(--white-color);
 }
 
 .details__button-container {
@@ -124,6 +112,7 @@ body {
     overflow: hidden;
     color: var(--aqua-green-color);
     cursor: pointer;
+    text-decoration: none;
 }
 
 .details__button:hover {
@@ -219,6 +208,7 @@ body {
 
 .suggestions__title {
     font-size: 1.5rem;
+    color: var(--white-color);
 }
 
 .suggestions__cards-container {
@@ -237,6 +227,7 @@ body {
     flex-direction: row;
     justify-content: center;
     width: 300px;
+    color: var(--white-color);
 }
 
 .suggestions__cards:hover {
@@ -264,6 +255,7 @@ body {
     display: inline-block;
     position: relative;
     font-size: 1rem;
+    text-decoration: none;
     color: var(--aqua-green-color);
     cursor: pointer;
     text-transform: uppercase;
@@ -305,6 +297,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: var(--white-color);
 }
 
 .cart__card-total {
@@ -413,6 +406,45 @@ body {
 .lead {
     margin-left: 15px;
     width: 80%;
+}
+
+para ubicar los elementossss
+
+.product__details {
+    background-color: orange;
+}
+
+.details__company {
+    background-color: violet;
+}
+
+.details__title {
+    background-color: pink;
+}
+
+.gallery__image-container,
+.suggestions__card-img {
+    background-color: red;
+}
+
+.details__price {
+    background-color: burlywood;
+}
+
+.suggestions__card-info {
+    background-color: purple;
+}
+
+.suggestions__product {
+    background-color: blue;
+}
+
+.suggestions__price {
+    background-color: yellow;
+}
+
+.button-container {
+    background-color: green;
 }
 
 @media (min-width: 768px) {
