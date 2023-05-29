@@ -126,6 +126,15 @@ const agregarUsuario= (e)=>{
 
     });
 
+    const showAdminBtn = () => {
+        const user = localStorage.getItem('user');
+        if (user !== 'administrador') {
+            document.querySelector('#adminBtn').classList.add('d-none');
+        };
+    };
+    
+    showAdminBtn();
+
 
     const mostrarModalMal= ()=>{
         alert_modal.classList.remove('d-none');
