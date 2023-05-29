@@ -1,13 +1,11 @@
-const bodyContainer = document.getElementById('.main-container');
-const productContainer = document.createDocumentFragment('.product__container');
+const bodyContainer = document.getElementById('main-container');
+const productContainer = document.createDocumentFragment('product__container');
 const cartElement = document.getElementById('cart');
 const footerElement = document.getElementById('footer');
 const templateElement = document.getElementById('template');
 const templateFooterElement = document.getElementById('templateFooter');
 
 const id = localStorage.getItem('productId');
-
-
 
 let cart = [];
 
@@ -137,5 +135,6 @@ loadCartFromLocalStorage();
 
 function checkUserKey() {
   return localStorage.getItem("user") !== null;
-};
+}
+
 
