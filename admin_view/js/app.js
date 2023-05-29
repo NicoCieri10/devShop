@@ -4,7 +4,16 @@ import products from "../../data/products.js";
 const containerMain = document.querySelector('#mainContainer');
 const templateProduct = document.querySelector('#templateProduct');
 const templateDivider = document.querySelector('#templateDivider');
-// const addButton = document.querySelector('#addButton');
+
+console.log(JSON.parse(localStorage.getItem('products')));
+
+// let localProducts = JSON.parse(localStorage.getItem('products'));
+
+// localProducts.forEach(product => {
+//     if(!products.includes(product)) {
+//         products.push(product);
+//     }
+// });
 
 class ProductAdmin extends Product {
     static showProducts(products) {
@@ -37,10 +46,12 @@ ProductAdmin.showProducts(products);
 
 document.addEventListener('click', (e) => {
     if (e.target.matches('#addButton')) {
-        console.log('hola');
         const id = products.length;
         const product = new Product('Nuevo Producto', 'Descripción', './../image/placeholder.png', 0, 0, id);
+        
         products.push(product);
+        localStorage.setItem('products', JSON.stringify(products));
+        console.log(products);
         ProductAdmin.showProducts(products);
     }
 });
