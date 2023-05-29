@@ -8,29 +8,19 @@ const footerElement = document.getElementById('footer');
 const templateElement = document.getElementById('template');
 const templateFooterElement = document.getElementById('templateFooter');
 
-const id = localStorage.getItem('ID');
+const id = localStorage.getItem('productId');
 
-const locationArchive = '../../data/products.js';
-
-function getDataFromArchive() {
-  const script = document.createElement('script');
-  script.src = '../../data/products.js';
-  script.onload = () => {
-
-    console.log(data);
-    data((product) => {
-      console.log('image', );
-      console.log('name', )
-      console.log('description', )
-      console.log('price', )
-      console.log('stock', )
-    })
-
-  };
-  document.body.appendChild(script);
+let product;
+if (id) {
+  product = products.find((product) => product.id === id);
 }
 
-getDataFromArchive();
+if (product) {
+  console.log('.details__title', product.name);
+  console.log('.details__description', product.description);
+  console.log('details__price', product.price);
+  console.log('.details__stock', product.stock);
+}
 
 let cart = [];
 
