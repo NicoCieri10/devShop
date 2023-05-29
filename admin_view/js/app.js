@@ -36,10 +36,11 @@ ProductAdmin.showProducts(products);
 // });
 
 document.addEventListener('click', (e) => {
-    if (e.target.matches('#addBtn')) {
-        const id = e.target.dataset.id;
-        const findProduct = products.findIndex((item) => item.id === parseInt(id));
-        products.splice(findProduct, 1);
+    if (e.target.matches('#addButton')) {
+        console.log('hola');
+        const id = products.length;
+        const product = new Product('Nuevo Producto', 'Descripción', './../image/placeholder.png', 0, 0, id);
+        products.push(product);
         ProductAdmin.showProducts(products);
     }
 });
