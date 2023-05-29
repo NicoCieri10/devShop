@@ -1,3 +1,6 @@
+import product from '../../models/product.js';
+import products from '../../data/products.js';
+
 const bodyContainer = document.getElementById('main-container');
 const productContainer = document.createDocumentFragment('product__container');
 const cartElement = document.getElementById('cart');
@@ -5,25 +8,22 @@ const footerElement = document.getElementById('footer');
 const templateElement = document.getElementById('template');
 const templateFooterElement = document.getElementById('templateFooter');
 
-const id = localStorage.getItem('');
+const id = localStorage.getItem('ID');
 
-const locationArchive = 'data/productss.js';
+const locationArchive = '../../data/products.js';
 
 function getDataFromArchive() {
   const script = document.createElement('script');
-  script.src = 'data/productss.js';
+  script.src = '../../data/products.js';
   script.onload = () => {
 
     console.log(data);
     data((product) => {
-      console.log('name', );
+      console.log('image', );
+      console.log('name', )
+      console.log('description', )
       console.log('price', )
-      console.log()
-      console.log()
-      console.log()
-      console.log()
-      console.log()
-      console.log()
+      console.log('stock', )
     })
 
   };
