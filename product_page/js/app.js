@@ -4,8 +4,16 @@ const cartElement = document.getElementById('cart');
 const footerElement = document.getElementById('footer');
 const templateElement = document.getElementById('template');
 const templateFooterElement = document.getElementById('templateFooter');
-
 let cart = [];
+
+const showAdminBtn = () => {
+  const user = localStorage.getItem('user');
+  if (user !== 'administrador') {
+      document.querySelector('#adminBtn').classList.add('d-none');
+  };
+};
+
+showAdminBtn();
 
 function renderCart() {
   cartElement.innerHTML = '';

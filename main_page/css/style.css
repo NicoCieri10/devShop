@@ -1,5 +1,266 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Sofia Sans", sans-serif;
+}
+
+:root {
+  --black: #1a1e29;
+  --blue: #132d46;
+  --green: #01c38e;
+  --white: #ffffff;
+}
+
+body {
+  background-color: var(--black);
+}
+
+.navbar {
+  background-color: var(--blue);
+}
+
+.header {
+  background-color: var(--blue);
+  display: flex;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  height: 55px;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__container-logo {
+  align-items: center;
+}
+
+.header__logo {
+  text-decoration: none;
+  color: var(--white);
+  font-weight: bold;
+  font-size: 20px;
+  margin: 0px;
+}
+
+.main__container {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--black);
+}
+
+.main__carousel {
+  margin-top: 55px;
+}
+
+.carousel-item {
+  height: 150px;
+}
+
+.carousel-img {
+  object-fit: contain;
+  height: 150px;
+}
+
+.main__section {
+  align-items: center;
+  justify-content: space-around;
+
+}
+
+.main__section--title {
+  margin-top: 10px;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 30px;
+}
+
+.section--title {
+  color: var(--white);
+  font-size: 25px;
+  margin: 0;
+}
+
+.main__section--row {
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+  margin-bottom: 10px;
+  justify-content: space-evenly;
+  padding: 15px 5px 0px 5px;
+  border-radius: 10px;
+  flex-wrap: wrap;
+  background-color: var(--green);
+}
+
+.section--card {
+  width: 120px;
+  height: 230px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--blue);
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.card--img {
+  width: 120px;
+  height: 130px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  object-fit: cover;
+}
+
+.card--body {
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  align-items: center;
+  padding: 10px 5px 5px 5px;
+}
+
+.card--title,
+.card--subtitle {
+  color: var(--white);
+}
+
+.card--title {
+  font-size: 15px;
+  height: 80px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card--subtitle {
+  height: 20px;
+}
+
+.main__section--products {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section--products-title {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 30px;
+  margin-bottom: 30px;
+}
+
+.products--title {
+  color: var(--white);
+  font-size: 25px;
+  margin: 0;
+}
+
+.section--products-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 768px) {
+  .carousel-item {
+    height: 200px;
+  }
+
+  .carousel-img {
+    height: 200px;
+  }
+
+  .section--title {
+    font-size: 30px;
+  }
+
+  .section--card {
+    margin: 0px 5px 20px;
+  }
+
+  .card--subtitle {
+    font-size: 22px;
+  }
+
+  .main__section--row {
+    margin: 40px 100px;
+    align-items: center;
+  }
+
+  .section--products-container {
+    padding: 0px 10px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header__navbar {
+    margin-left: 100px;
+    display: block;
+  }
+
+  .header__navbar-link {
+    margin-left: 30px;
+    color: var(--white);
+    text-decoration: none;
+  }
+
+  .carousel-item {
+    height: 300px;
+  }
+
+  .carousel-img {
+    height: 300px;
+  }
+
+  .main__section--title {
+    padding-top: 20px;
+    height: 50px;
+  }
+
+  .main__section--row {
+    /* max-width: 1000px; */
+    margin: 40px 5em;
+  }
+
+  .section--products-container {
+    max-width: 1500px;
+    justify-content: space-around;
+  }
+
+  .section--title {
+    font-size: 35px;
+  }
+
+  .section--card {
+    width: 180px;
+    height: 320px;
+  }
+
+  .card--img {
+    width: 180px;
+    height: 200px;
+  }
+
+  .card--body {
+    padding: 15px 10px;
+    height: 120px;
+  }
+
+  .card--title {
+    font-size: 20px;
+    height: 100px;
+  }
+
+  .card--subtitle {
+    height: 25px;
+    font-size: 28px;
+  }
 }
