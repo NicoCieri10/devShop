@@ -25,6 +25,8 @@ export default class Product {
         clone.querySelector('.product_price').textContent = `$${this.price}`;
         clone.querySelector('.product_stock').textContent = `${this.stock} u.`;
         clone.querySelector('.product-card').dataset.id = this.id;
+        clone.querySelector('.product-button-mobile').dataset.id = this.id;
+        clone.querySelector('.product-button').dataset.id = this.id;
         clone.querySelector('.product-img').src = `.${this.image}`;
 
         return clone;

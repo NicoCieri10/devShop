@@ -13,6 +13,15 @@ console.log(id);
 
 let cart = [];
 
+const showAdminBtn = () => {
+  const user = localStorage.getItem('user');
+  if (user !== 'administrador') {
+      document.querySelector('#adminBtn').classList.add('d-none');
+  };
+};
+
+showAdminBtn();
+
 function renderCart() {
   cartElement.innerHTML = '';
 

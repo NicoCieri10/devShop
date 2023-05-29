@@ -35,14 +35,14 @@ class ProductAdmin extends Product {
 
 ProductAdmin.showProducts(products);
 
-// document.addEventListener('click', (e) => {
-//     if (e.target.matches('.btn--delete')) {
-//         const id = e.target.dataset.id;
-//         const findProduct = products.findIndex((item) => item.id === parseInt(id));
-//         products.splice(findProduct, 1);
-//         ProductAdmin.showProducts(products);
-//     }
-// });
+document.addEventListener('click', (e) => {
+    if (e.target.matches('#deleteButton')) {
+        const id = e.target.dataset.id;
+        const findProduct = products.findIndex((item) => item.id === parseInt(id));
+        products.splice(findProduct, 1);
+        ProductAdmin.showProducts(products);
+    }
+});
 
 document.addEventListener('click', (e) => {
     if (e.target.matches('#addButton')) {
