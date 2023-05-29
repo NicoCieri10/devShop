@@ -72,6 +72,7 @@ formulario.addEventListener('submit',(e) =>{
     }
     agregarUsuario(e);
     mostrarFormEnviado ();
+    limpiarFormulario();
 
 });
 
@@ -87,6 +88,13 @@ const mostrarMsjError =(errores) =>{
     });
 }
 
+function limpiarFormulario() {
+    formulario.reset();
+  }
+
+
+
+
 const agregarUsuario= (e)=>{
     const usuario={
         email:campo_email.value,
@@ -101,11 +109,13 @@ const agregarUsuario= (e)=>{
     const valorUser=email_modal.value;
     const valorContra=contra_modal.value;
     if(usuarios[0].email===valorUser && usuarios[0].contra===valorContra){
-        location.href="/admin_view/admin_view.html";
+        location.href="/admin_view/admin_view.html"
+        localStorage.setItem('user','administrador');
     }else{
         const findUser=usuarios.find((item)=>item.email ===valorUser && item.contra===valorContra);
         if(findUser !==undefined){
             location.href ="/index.html";
+            localStorage.setItem('user','usuario');
             }else{
                 mostrarModalMal();
             }
