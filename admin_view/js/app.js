@@ -7,14 +7,6 @@ const templateDivider = document.querySelector('#templateDivider');
 
 console.log(JSON.parse(localStorage.getItem('products')));
 
-// let localProducts = JSON.parse(localStorage.getItem('products'));
-
-// localProducts.forEach(product => {
-//     if(!products.includes(product)) {
-//         products.push(product);
-//     }
-// });
-
 class ProductAdmin extends Product {
     static showProducts(products) {
         containerMain.textContent = '';
@@ -39,6 +31,7 @@ document.addEventListener('click', (e) => {
     if (e.target.matches('#deleteButton')) {
         const id = e.target.dataset.id;
         const findProduct = products.findIndex((item) => item.id === parseInt(id));
+
         products.splice(findProduct, 1);
         ProductAdmin.showProducts(products);
     }
@@ -51,7 +44,22 @@ document.addEventListener('click', (e) => {
         
         products.push(product);
         localStorage.setItem('products', JSON.stringify(products));
-        console.log(products);
         ProductAdmin.showProducts(products);
+    }
+});
+
+document.addEventListener('click', (e) => {
+    if (e.target.matches('#title')) {
+        const id = e.target.dataset.id;
+        e.target.classList.add('d-none');
+        e.target.nextElementSibling.classList.remove('d-none');
+    }
+});
+
+document.addEventListener('click', (e) => {
+    if (e.target.matches('#description')) {
+        const id = e.target.dataset.id;
+        e.target.classList.add('d-none');
+        e.target.nextElementSibling.classList.remove('d-none');
     }
 });

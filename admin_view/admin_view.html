@@ -59,14 +59,17 @@
 
   </section>
   <div class="main__container-btn" id="addButton">+</div>
+  <div class="main__container-btn-save" id="saveButton">✔</div>
 
   <template id="templateProduct">
     <article class="product-card">
       <div class="product-card-body">
         <img class="product-img" src="../image/placeholder.png" alt="product_img" />
         <h5 class="product-text-container">
-          <span class="product-title">Product</span>
-          <span class="product-description">Description</span>
+          <span class="product-title" id="title">Product</span>
+          <input class="product-title-input d-none" id="titleInput" type="text">
+          <span class="product-description" id="description">Description</span>
+          <input class="product-description-input d-none" id="descriptionInput" type="text">
         </h5>
         <div class="product-column">
           <span class="product-button" id="deleteButton">Eliminar</span>
