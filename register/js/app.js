@@ -94,15 +94,6 @@ function limpiarFormulario() {
     formulario.reset();
 }
 
-const showAdminBtn = () => {
-    const user = localStorage.getItem('user');
-    if (user !== 'administrador') {
-        document.querySelector('#adminBtn').classList.add('d-none');
-    };
-};
-
-showAdminBtn();
-
 const agregarUsuario= (e)=>{
     const usuario={
         email:campo_email.value,
