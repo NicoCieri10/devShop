@@ -5,7 +5,32 @@ const footerElement = document.getElementById('footer');
 const templateElement = document.getElementById('template');
 const templateFooterElement = document.getElementById('templateFooter');
 
-const id = localStorage.getItem('productId');
+const id = localStorage.getItem('');
+
+const locationArchive = 'data/productss.js';
+
+function getDataFromArchive() {
+  const script = document.createElement('script');
+  script.src = 'data/productss.js';
+  script.onload = () => {
+
+    console.log(data);
+    data((product) => {
+      console.log('name', );
+      console.log('price', )
+      console.log()
+      console.log()
+      console.log()
+      console.log()
+      console.log()
+      console.log()
+    })
+
+  };
+  document.body.appendChild(script);
+}
+
+getDataFromArchive();
 
 let cart = [];
 
