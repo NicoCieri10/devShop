@@ -216,11 +216,13 @@
         padding: 0px 40px;
     }
 
-    .product-title {
+    .product-title,
+    .product-title-input {
         font-size: 25px;
     }
 
-    .product-description {
+    .product-description,
+    .product-description-input {
         margin-top: 20px;
         font-size: 15px;
     }
@@ -314,7 +316,8 @@
         padding: 0px 40px;
     }
 
-    .product-description {
+    .product-description,
+    .product-description-input {
         margin-top: 20px;
     }
 
