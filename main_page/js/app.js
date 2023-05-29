@@ -34,5 +34,22 @@ class ProductMain extends Product{
     }
 }
 
+const showAdminBtn = () => {
+    const user = localStorage.getItem('user');
+    if (user !== 'administrador') {
+        document.querySelector('#adminBtn').classList.add('d-none');
+    };
+};
+
+showAdminBtn();
+
+document.addEventListener('click', (e) => { 
+    if(e.target.matches('.card--img') || e.target.matches('.card--title') || e.target.matches('.card--subtitle')) {
+        const id = e.target.dataset.id;
+        localStorage.setItem('product', id);
+        window.location.href = '../../product_page/product_page.html';
+    }
+});
+
 ProductMain.showRecentProducts(products);
 ProductMain.showAllProducts(products);

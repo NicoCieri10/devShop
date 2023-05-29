@@ -23,6 +23,8 @@ const usuarios=[
     },
 ];
 
+
+
 formulario.addEventListener('submit',(e) =>{
     e.preventDefault();
     alert_success.classList.add('d-none');
@@ -90,10 +92,16 @@ const mostrarMsjError =(errores) =>{
 
 function limpiarFormulario() {
     formulario.reset();
-  }
+}
 
+const showAdminBtn = () => {
+    const user = localStorage.getItem('user');
+    if (user !== 'administrador') {
+        document.querySelector('#adminBtn').classList.add('d-none');
+    };
+};
 
-
+showAdminBtn();
 
 const agregarUsuario= (e)=>{
     const usuario={
