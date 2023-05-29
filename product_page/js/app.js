@@ -1,26 +1,9 @@
-import product from '../../models/product.js';
-import products from '../../data/products.js';
-
 const bodyContainer = document.getElementById('main-container');
 const productContainer = document.createDocumentFragment('product__container');
 const cartElement = document.getElementById('cart');
 const footerElement = document.getElementById('footer');
 const templateElement = document.getElementById('template');
 const templateFooterElement = document.getElementById('templateFooter');
-
-const id = localStorage.getItem('productId');
-
-let product;
-if (id) {
-  product = products.find((product) => product.id === id);
-}
-
-if (product) {
-  console.log('.details__title', product.name);
-  console.log('.details__description', product.description);
-  console.log('details__price', product.price);
-  console.log('.details__stock', product.stock);
-}
 
 let cart = [];
 

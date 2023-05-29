@@ -408,45 +408,6 @@ body {
     width: 80%;
 }
 
-para ubicar los elementossss
-
-.product__details {
-    background-color: orange;
-}
-
-.details__company {
-    background-color: violet;
-}
-
-.details__title {
-    background-color: pink;
-}
-
-.gallery__image-container,
-.suggestions__card-img {
-    background-color: red;
-}
-
-.details__price {
-    background-color: burlywood;
-}
-
-.suggestions__card-info {
-    background-color: purple;
-}
-
-.suggestions__product {
-    background-color: blue;
-}
-
-.suggestions__price {
-    background-color: yellow;
-}
-
-.button-container {
-    background-color: green;
-}
-
 @media (min-width: 768px) {
 
     .suggestions__cards-container {
